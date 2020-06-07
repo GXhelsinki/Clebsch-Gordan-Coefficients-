@@ -1,4 +1,4 @@
-# Clebsch-Gordan-Coefficients-
+# Clebsch-Gordan-Coefficients
 A Matlab code for computing Clebsch-Gordan Coefficients
 These are a few scripts which compute the Clebsch-Gordan Coefficeints by using a new recursion method: 
 the sign-exponent recursion. The method uses the iteration of sign and exponent to avoid numerical overflows or
