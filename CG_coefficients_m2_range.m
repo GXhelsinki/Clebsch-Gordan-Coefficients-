@@ -111,7 +111,7 @@ elseif (dn1<dntop) % upward reccurence ;
             dd2=Df(m2, m3, j1, j2, j3);
             cc2=Cf(m2+1, j2, j3, m3-1);
             Cx(k+1)=-Cx(k)*dd2/cc2;
-            sc=sc+Cx(k+1)^2;
+            %sc=sc+Cx(k+1)^2;
             
             k=k+1;
         else
@@ -119,7 +119,7 @@ elseif (dn1<dntop) % upward reccurence ;
             cc2= Cf(m2+1, j2, j3, m3-1);
             dd2=Df(m2, m3, j1, j2, j3);
             Cx(k+1)=-(dd2*Cx(k)+Cx(k-1)*cc1)/cc2;
-            sc = sc + Cx(k+1)^2;
+            %sc = sc + Cx(k+1)^2;
             k =k+1;
             
         end
