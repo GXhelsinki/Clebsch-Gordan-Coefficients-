@@ -80,11 +80,11 @@ CG(nC) = zeros; % CG-coefficients;
 Sn(nC) = ones;  % sign of coefficients;
 Kn(nC) = zeros; % exponents of the coefficients;
 
-masge1 =strcat('possible non-zero number is ', num2str(nC)); 
-masge2 =strcat('requested number of coefficients is ', num2str(No3)); 
-
-fprintf(masge1);
-fprintf(masge2);
+% masge1 =strcat('possible non-zero number is ', num2str(nC)); 
+% masge2 =strcat('requested number of coefficients is ', num2str(No3)); 
+% 
+% fprintf(masge1);
+% fprintf(masge2);
 
 
 % kp1=n3p-N3min;
@@ -176,7 +176,7 @@ elseif (( abs(n1-n2)<abs(m3))&& (m3<0))
     %b=6
 end
 
-if (N3max<=30) % upward only; 
+if (N3max<=10) % upward only; 
        % b=8
     k=1;
     ntop=N3max;
@@ -230,7 +230,7 @@ if (N3max<=30) % upward only;
     end
     %return;
 end
-if (N3max > 30) % combine upawrd and downward; 
+if (N3max > 10) % combine upawrd and downward; 
         %b=9
         % let us do upward first;
         ntop=N3min+Nmid+1;
@@ -278,7 +278,7 @@ if (N3max > 30) % combine upawrd and downward;
                     %kkk=1
                     CG(k+1) = A*(B*CG(k) - C*CG(k-1));
                     Sn(k+1) = sign(CG(k+1));
-                    Kn(k+1) = exp(abs(CG(k+1)));
+                    Kn(k+1) = log(abs(CG(k+1)));
                     k=k+1;    
                 end
                 % CG(k+1) = A*(B*CG(k) - C*CG(k-1));
